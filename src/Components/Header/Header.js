@@ -3,11 +3,29 @@ import menu from './scr/menu.png'
 import search from './scr/lupa.png'
 import basket from './scr/basket.png'
 import './style.css'
+import {useState} from "react";
 function Header(){
+    const screenWidth = window.screen.width
+    console.log(screenWidth)
+    const [nav, setNav] = useState(false);
+
+
+    // function changeState(){
+    //     if(screenWidth > 768){
+    //         setNav(() => {
+    //             return false
+    //         })
+    //     }else{
+    //         setNav(() => {
+    //             return !nav
+    //         })
+    //     }
+    // }
+
     return(
         <div className='header'>
             <div><a className='header__logo'>AMAN<span>FOOD</span></a></div>
-            <nav className='header__navbar'>
+            <nav className={nav === false ? 'header__navbar' : 'header__navbar__activate'}>
                 <a>Home</a>
                 <a>Restaurants</a>
                 <a>About</a>

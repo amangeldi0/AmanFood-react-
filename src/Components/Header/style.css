@@ -48,4 +48,37 @@
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  #menu {
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+  .header .header__navbar {
+    display: none;
+  }
+  .header .header__navbar__activate {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: #fff;
+  }
+  .header .header__navbar__activate a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 1rem;
+    background: #eee;
+  }
+}
+@media (max-width: 630px) {
+  .header .header__logo {
+    font-size: 1.5rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
