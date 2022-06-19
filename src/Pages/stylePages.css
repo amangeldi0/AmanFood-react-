@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.2s linear;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.swiper-button-next {
+  color: #192a56;
+}
+
+.swiper-button-prev {
+  color: #192a56;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+.container .my__swiper .slides {
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .my__swiper .slides .text__block span {
+  color: #27ae60;
+  font-size: 2.5rem;
+}
+.container .my__swiper .slides .text__block h3 {
+  color: #192a56;
+  font-size: 7rem;
+}
+.container .my__swiper .slides .text__block p {
+  color: #666;
+  font-size: 2.2rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
+}
+.container .my__swiper .slides .text__block a {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #192a56;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+}
+.container .my__swiper .slides .text__block a:hover {
+  background: #27ae60;
+  transform: translateY(-5px);
+  transition-duration: 0.4s;
+}
+.container .my__swiper img {
+  width: 35%;
+}
+
+@media (max-width: 1324px) {
+  .container .my__swiper .slides .text__block span {
+    font-size: 2rem;
+  }
+  .container .my__swiper .slides .text__block h3 {
+    font-size: 5rem;
+  }
+  .container .my__swiper .slides .text__block p {
+    font-size: 1.7rem;
+    padding: 0.4rem 0;
+  }
+}
+@media (max-width: 1015px) {
+  .container .my__swiper .slides .text__block span {
+    font-size: 1.8rem;
+  }
+  .container .my__swiper .slides .text__block h3 {
+    font-size: 4.5rem;
+  }
+  .container .my__swiper .slides .text__block p {
+    font-size: 1.4rem;
+    padding: 0.3rem 0;
+    line-height: 1;
+  }
+  .container .my__swiper .slides .text__block a {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 870px) {
+  .container .my__swiper .slides .text__block span {
+    font-size: 1.3rem;
+  }
+  .container .my__swiper .slides .text__block h3 {
+    font-size: 3.7rem;
+  }
+  .container .my__swiper .slides .text__block p {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+    line-height: 1;
+  }
+  .container .my__swiper .slides .text__block a {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .container .my__swiper .slides img {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .container .my__swiper .slides {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .container .my__swiper .slides .text__block span {
+    font-size: 1.3rem;
+  }
+  .container .my__swiper .slides .text__block h3 {
+    font-size: 2.7rem;
+  }
+  .container .my__swiper .slides .text__block p {
+    font-size: 0.7rem;
+    padding: 0.3rem 0;
+    line-height: 1;
+  }
+  .container .my__swiper .slides .text__block a {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .container .my__swiper .slides img {
+    width: 50%;
+  }
+}
+.restaurants {
+  width: 95%;
+  margin: 200px auto 0 auto;
+}
+.restaurants .heading {
+  text-align: center;
+  color: #27ae60;
+  font-size: 3rem;
+}
+.restaurants .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.restaurants .box-container .box {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.restaurants .box-container .box:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.4s;
+}
+.restaurants .box-container .box__name {
+  text-transform: uppercase;
+  color: #192a56;
+  font-size: 2rem;
+}
+.restaurants .box-container .box__des {
+  color: #666;
+  font-size: 0.9rem;
+}
+.restaurants .box-container .box__img {
+  margin: 0 auto;
+  width: 250px;
+}
+.restaurants .box-container .box__img img {
+  width: 100%;
+}
+
+.about {
+  width: 95%;
+  margin: 0 auto;
+}
+.about h1 {
+  text-align: center;
+  color: #192a56;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+.about h3 {
+  text-align: center;
+  color: #27ae60;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+.about .about__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.about .about__content .describe {
+  flex: 1 1 45rem;
+}
+.about .about__content .describe h3 {
+  color: #192a56;
+  font-size: 4rem;
+  padding: 0.5rem 0;
+}
+.about .about__content .describe p {
+  color: #666;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  line-height: 2;
+}
+.about .about__content .describe a {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #192a56;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+}
+.about .about__content .describe a:hover {
+  background: #27ae60;
+  transform: translateY(-5px);
+  transition-duration: 0.4s;
+}
+.about .about__content .describe .inf {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+}
+.about .about__content .describe .inf .quality {
+  background: #eee;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1 1 17rem;
+  padding: 1.5rem 1rem;
+}
+.about .about__content .describe .inf .quality span {
+  font-size: 1.5rem;
+}
+.about .about__content .photo {
+  flex: 1 1 45rem;
+}
+.about .about__content .photo img {
+  width: 80%;
+}
+
+.quality i {
+  color: #27ae60;
+}
+
+/*# sourceMappingURL=stylePages.css.map */

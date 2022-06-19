@@ -1,0 +1,325 @@
+// __________________________АБНУЛЕНИЕ_______________________________________________________
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+*{padding: 0;margin: 0;border: 0; font-family: 'Nunito', sans-serif; transition: all .2s linear;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+
+// PEREMENNYE
+$green:#27ae60;
+$black:#192a56;
+$light-color:#666;
+$boxshad:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+
+// Home and Swiper
+.swiper-button-next{
+  color: $black;
+
+}
+.swiper-button-prev{
+  color: $black;
+}
+.container{
+  width: 95%;
+  margin: 0 auto;
+  .my__swiper{
+    .slides{
+      margin-top: 7%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .text__block{
+        span{
+          color:$green;
+          font-size: 2.5rem;
+        }
+        h3{
+          color:$black;
+          font-size: 7rem;
+        }
+        p{
+          color:$light-color;
+          font-size: 2.2rem;
+          padding:.5rem 0;
+          line-height: 1.5;
+        }
+        a{
+          margin-top: 1rem;
+          display: inline-block;
+          font-size: 1.4rem;
+          color:#fff;
+          background: $black;
+          border-radius: .4rem;
+          cursor: pointer;
+          padding:.6rem 1rem;
+          text-decoration: none;
+          &:hover{
+            background: $green;
+            transform: translateY(-5px);
+            transition-duration: .4s;
+          }
+        }
+      }
+    }
+    img{
+      width: 35%;
+    }
+  }
+}
+@media (max-width: 1324px){
+  .container{
+    .my__swiper{
+      .slides{
+        .text__block{
+          span{
+            font-size: 2rem;
+          }
+          h3{
+            font-size: 5rem;
+          }
+          p{
+            font-size: 1.7rem;
+            padding:.4rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1015px){
+  .container {
+    .my__swiper {
+      .slides {
+        .text__block {
+          span {
+            font-size: 1.8rem;
+          }
+
+          h3 {
+            font-size: 4.5rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+            padding: .3rem 0;
+            line-height: 1;
+          }
+
+          a {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 870px){
+  .container {
+    .my__swiper {
+      .slides {
+        .text__block {
+          span {
+            font-size: 1.3rem;
+          }
+
+          h3 {
+            font-size: 3.7rem;
+          }
+
+          p {
+            font-size: 1rem;
+            padding: .3rem 0;
+            line-height: 1;
+          }
+
+          a {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+          }
+        }
+        img{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px){
+  .container {
+    .my__swiper {
+      .slides {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 500px){
+  .container {
+    .my__swiper {
+      .slides {
+        .text__block {
+          span {
+            font-size: 1.3rem;
+          }
+
+          h3 {
+            font-size: 2.7rem;
+          }
+
+          p {
+            font-size: 0.7rem;
+            padding: .3rem 0;
+            line-height: 1;
+          }
+
+          a {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+          }
+        }
+        img{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+// Restaurants
+
+.restaurants{
+  width: 95%;
+  margin: 200px auto 0 auto;
+  .heading{
+    text-align: center;
+    color:$green;
+    font-size: 3rem;
+  }
+  .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap:1.5rem;
+    margin-top: 4rem;
+    .box{
+      padding:1rem;
+      background:#fff;
+      border-radius: .5rem;
+      border:.1rem solid rgba(0,0,0,.2);
+      box-shadow: $boxshad;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      &:hover{
+        transform: translateY(-5px);
+        transition-duration: .4s;
+      }
+    }
+    .box__name{
+      text-transform: uppercase;
+      color: $black;
+      font-size: 2rem;
+    }
+    .box__des{
+      color: $light-color;
+      font-size: .9rem;
+
+    }
+    .box__img{
+      margin: 0 auto;
+      width: 250px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+// About
+.about{
+  width: 95%;
+  margin: 0 auto;
+  h1{
+    text-align: center;
+    color:$black;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  h3{
+    text-align: center;
+    color:$green;
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+  .about__content{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+    .describe{
+      flex:1 1 45rem;
+      h3{
+        color:$black;
+        font-size: 4rem;
+        padding:.5rem 0;
+      }
+      p{
+        color:$light-color;
+        font-size: 1.5rem;
+        padding:.5rem 0;
+        line-height: 2;
+      }
+      a{
+        margin-top: 1rem;
+        display: inline-block;
+        font-size: 1.4rem;
+        color:#fff;
+        background: $black;
+        border-radius: .4rem;
+        cursor: pointer;
+        padding:.6rem 1rem;
+        text-decoration: none;
+        &:hover{
+          background: $green;
+          transform: translateY(-5px);
+          transition-duration: .4s;
+        }
+      }
+      .inf{
+        display: flex;
+        gap:1rem;
+        flex-wrap: wrap;
+        padding:1rem 0;
+        margin-top: .5rem;
+        .quality{
+          background:#eee;
+          border-radius: .5rem;
+          border:.1rem solid rgba(0,0,0,.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap:1rem;
+          flex:1 1 17rem;
+          padding:1.5rem 1rem;
+          span{
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    .photo{
+      flex:1 1 45rem;
+      img{
+        width: 80%;
+      }
+    }
+  }
+}
+.quality{
+  i{
+    color: #27ae60;
+  }
+}
+
