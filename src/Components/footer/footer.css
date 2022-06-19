@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#gmail {
+  text-transform: none;
+}
+
+@media (max-width: 380px) {
+  #gmail {
+    font-size: 18px;
+  }
+}
+.footer {
+  margin-top: 14rem;
+  padding-top: 100px;
+  position: relative;
+  background: #222222;
+}
+
+.footer .box-container {
+  display: grid;
+  width: 95%;
+  margin: 0 auto 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.footer .box-container .box a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.footer .box-container .box a:hover {
+  color: #27ae60;
+}
+
+.footer .credit {
+  text-align: center;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+  color: white;
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+  margin-top: 12.5rem;
+}
+
+.footer .credit span {
+  color: white;
+}
+
+/*# sourceMappingURL=footer.css.map */
