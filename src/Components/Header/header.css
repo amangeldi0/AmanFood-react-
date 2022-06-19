@@ -18,34 +18,55 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
   width: 95%;
   margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header .header__logo {
-  font-size: 2.5rem;
+.header__container .header__logo {
+  font-size: 2.2rem;
   font-weight: bolder;
   padding: 1rem 0;
   color: #192a56;
 }
-.header .header__logo span {
+.header__container .header__logo span {
   color: #27ae60;
 }
-.header .header__navbar a {
+.header__container .header__navbar a {
+  color: #192a56;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+}
+.header__container .header__navbar a:hover {
+  color: #27ae60;
+}
+.header__container .header__icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__container .header__navbar__activate a {
   color: #192a56;
   font-size: 1.7rem;
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
 }
-.header .header__navbar a:hover {
+.header__container .header__navbar__activate a:hover {
   color: #27ae60;
-}
-.header .header__icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
 
 @media (max-width: 768px) {
@@ -54,24 +75,25 @@
     position: relative;
     z-index: 3;
   }
-  .header .header__navbar {
+  .header__container .header__navbar {
     display: none;
   }
-  .header .header__navbar__activate {
+  .header__container .header__navbar__activate {
     position: absolute;
+    z-index: 3;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    top: 65px;
+    top: 75px;
     left: 0;
     right: 0;
     background: #fff;
   }
-  .header .header__navbar__activate a {
+  .header__container .header__navbar__activate a {
     display: block;
-    padding: 1.5rem;
-    margin: 1rem;
-    font-size: 1rem;
+    padding: 1.2rem;
+    margin: 0.4rem;
+    font-size: 1.2rem;
     background: #eee;
   }
 }
@@ -79,6 +101,14 @@
   .header .header__logo {
     font-size: 1.5rem;
   }
+  .header .header__icons div img {
+    width: 24px;
+  }
+  .header .header__navbar__activate a {
+    padding: 1rem;
+    margin: 0.2rem;
+    font-size: 1rem;
+  }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=header.css.map */

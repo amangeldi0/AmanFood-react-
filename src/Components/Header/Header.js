@@ -1,40 +1,31 @@
-
 import menu from './scr/menu.png'
 import search from './scr/lupa.png'
 import basket from './scr/basket.png'
-import './style.css'
+import './header.css'
 import {useState} from "react";
 function Header(){
-    const screenWidth = window.screen.width
-    console.log(screenWidth)
     const [nav, setNav] = useState(false);
-
-
-    // function changeState(){
-    //     if(screenWidth > 768){
-    //         setNav(() => {
-    //             return false
-    //         })
-    //     }else{
-    //         setNav(() => {
-    //             return !nav
-    //         })
-    //     }
-    // }
-
+    function changeState(){
+        setNav(() => {
+            return !nav
+        })
+    }
     return(
         <div className='header'>
-            <div><a className='header__logo'>AMAN<span>FOOD</span></a></div>
-            <nav className={nav === false ? 'header__navbar' : 'header__navbar__activate'}>
-                <a>Home</a>
-                <a>Restaurants</a>
-                <a>About</a>
-            </nav>
-            <div className="header__icons">
-                <div id="menu"><img src={menu}/></div>
-                <div id="search-icon"><img src={search}/></div>
-                <div id="basket"><img src={basket}/> </div>
+            <div className='header__container'>
+                <div><a className='header__logo'>AMAN<span>FOOD</span></a></div>
+                <nav className={(nav === false) ? 'header__navbar' : 'header__navbar__activate'}>
+                    <a>Home</a>
+                    <a>Restaurants</a>
+                    <a>About</a>
+                </nav>
+                <div className="header__icons">
+                    <div id="menu"><img src={menu} onClick={changeState}/></div>
+                    <div id="search-icon"><img src={search}/></div>
+                    <div id="basket"><img src={basket}/> </div>
+                </div>
             </div>
+
         </div>
     )
 }
